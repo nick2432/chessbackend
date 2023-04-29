@@ -32,6 +32,18 @@ io.on("connection",(socket)=>{
     socket.on("send",(data1)=>{
       socket.to(data).emit("receive",data1)
     });
+    socket.on("color",(data1)=>{
+      socket.to(data).emit("rec",data1)
+    });
+    socket.on("color1",(data1)=>{
+      socket.to(data).emit("re",data1)
+    });
+    socket.on("time",(data1)=>{
+      socket.to(data).emit("tx",data1)
+    });
+    socket.on("check",(data1)=>{
+      socket.to(data).emit("rcheck",data1)
+    });
     socket.on("checkmate",(data1)=>{
       socket.to(data).emit("lose",data1)
     });
@@ -51,6 +63,18 @@ io.on("connection",(socket)=>{
     });
     socket.on("send",(data1)=>{
       socket.to(data).emit("receive",data1)
+    });
+    socket.on("color",(data1)=>{
+      socket.to(data).emit("rec",data1)
+    });
+    socket.on("color1",(data1)=>{
+      socket.to(data).emit("re",data1)
+    });
+    socket.on("check",(data1)=>{
+      socket.to(data).emit("rcheck",data1)
+    });
+    socket.on("time",(data1)=>{
+      socket.to(data).emit("tx",data1)
     });
     socket.on("checkmate",(data1)=>{
       socket.to(data).emit("lose",data1)
